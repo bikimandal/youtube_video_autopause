@@ -83,15 +83,15 @@ export default function App() {
         {/* Compact features in a row */}
         <div className="grid grid-cols-3 gap-2 text-center">
           <div className="bg-gray-900 rounded-lg p-2 border border-gray-800">
-            <IoMdCheckmarkCircle className="text-green-500 mx-auto mb-1" size={16} />
+            <IoMdCheckmarkCircle className="text-green-500 mx-auto mb-1" size={20} />
             <p className="text-xs text-gray-300 font-medium">Auto Pause</p>
           </div>
           <div className="bg-gray-900 rounded-lg p-2 border border-gray-800">
-            <IoMdCheckmarkCircle className="text-green-500 mx-auto mb-1" size={16} />
+            <IoMdCheckmarkCircle className="text-green-500 mx-auto mb-1" size={20} />
             <p className="text-xs text-gray-300 font-medium">Auto Resume</p>
           </div>
           <div className="bg-gray-900 rounded-lg p-2 border border-gray-800">
-            <IoMdCheckmarkCircle className="text-green-500 mx-auto mb-1" size={16} />
+            <IoMdCheckmarkCircle className="text-green-500 mx-auto mb-1" size={20} />
             <p className="text-xs text-gray-300 font-medium">Save Battery</p>
           </div>
         </div>
