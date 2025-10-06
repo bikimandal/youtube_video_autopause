@@ -1,0 +1,89 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#darkBg)"/>
+  
+  <!-- Inner glow effect -->
+  <circle cx="256" cy="256" r="220" fill="url(#innerGlow)" opacity="0.3"/>
+  
+  <!-- YouTube play button shape (modified for pause) -->
+  <g filter="url(#shadow)">
+    <!-- YouTube rounded rectangle background -->
+    <rect x="106" y="176" width="300" height="160" rx="40" fill="url(#youtubeRed)"/>
+    
+    <!-- Pause bars -->
+    <rect x="196" y="216" width="40" height="80" rx="8" fill="white"/>
+    <rect x="276" y="216" width="40" height="80" rx="8" fill="white"/>
+    
+    <!-- Subtle inner shadow on pause bars -->
+    <rect x="196" y="216" width="40" height="80" rx="8" fill="url(#pauseGradient)" opacity="0.2"/>
+    <rect x="276" y="216" width="40" height="80" rx="8" fill="url(#pauseGradient)" opacity="0.2"/>
+  </g>
+  
+  <!-- Auto-pause indicator circle -->
+  <g filter="url(#glowEffect)">
+    <circle cx="360" cy="152" r="50" fill="#030712" stroke="url(#borderGradient)" stroke-width="4"/>
+    
+    <!-- Auto symbol -->
+    <text x="360" y="142" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">AUTO</text>
+    
+    <!-- Power/pause icon -->
+    <circle cx="360" cy="164" r="12" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+    <line x1="360" y1="152" x2="360" y2="164" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Animated pulse rings -->
+  <circle cx="256" cy="256" r="240" fill="none" stroke="url(#pulseGradient)" stroke-width="2" opacity="0.3">
+    <animate attributeName="r" values="240;250;240" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Definitions for gradients and effects -->
+  <defs>
+    <!-- Dark background gradient -->
+    <radialGradient id="darkBg" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#1F2937"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </radialGradient>
+    
+    <!-- Inner glow -->
+    <radialGradient id="innerGlow" cx="50%" cy="30%">
+      <stop offset="0%" stop-color="#DC2626" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#DC2626" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- YouTube red gradient -->
+    <linearGradient id="youtubeRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="50%" stop-color="#B91C1C"/>
+      <stop offset="100%" stop-color="#991B1B"/>
+    </linearGradient>
+    
+    <!-- Pause bars gradient -->
+    <linearGradient id="pauseGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    
+    <!-- Border gradient for AUTO badge -->
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    
+    <!-- Pulse gradient -->
+    <linearGradient id="pulseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#7C2D12"/>
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    
+    <!-- Glow effect -->
+    <filter id="glowEffect" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#10B981" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+</svg>
